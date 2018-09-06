@@ -1,4 +1,4 @@
-# MeAcha
+﻿# MeAcha
 <b> Projeto Me Acha </b> - App buscador de produtos em supermercados
 
 Trabalho de Conclusão de Curso - Técnico em Informática
@@ -19,6 +19,7 @@ Stack do desenvolvimento:
   <li>Node JS</li>
   <li>Visual Studio Code</li>
   <li>GitHub</li>
+  <li>Git</li>
   <li>Adobe Photoshop</li>
   <li>Adobe Illustrator</li>
   <li>Adobe XD</li>
