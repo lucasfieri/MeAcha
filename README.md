@@ -1,6 +1,10 @@
 # MeAcha
 <b> Projeto Me Acha </b> - App buscador de produtos em supermercados
 
+Trabalho de Conclusão de Curso - Técnico em Informática
+<br>
+<b> Etec Fernando Prestes - Sorocaba / SP - 2018 </b>
+
 Integrantes: <br> 
 <b>  Ianaê Correa Salgado
 <br> Erick Auander
