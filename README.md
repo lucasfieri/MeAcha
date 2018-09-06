@@ -5,17 +5,12 @@ Trabalho de Conclusão de Curso - Técnico em Informática
 <br>
 <b> Etec Fernando Prestes - Sorocaba / SP - 2018 </b>
 
-<br>
 Integrantes:
 <br>
-<b>Ianaê Correa Salgado
-<br>
-   Erick Auander
-<br>
-   Lucas Fieri
+<b>Ianaê Correa Salgado<br>
+   Erick Auander<br>
+   Lucas Fieri <br>
 </b>
-
-<br>
 
 Stack do desenvolvimento:
 <br> 
