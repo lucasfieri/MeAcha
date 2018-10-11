@@ -1,16 +1,14 @@
-.Splash{
-    position:absolute;
-	background-color: #f4a45b;
-	min-height:100%;
-	min-width:100%;
+#logo{
+	width: 40%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20em; 
+	display: block;
+
 }
-.App-logo{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-	width: 50%;
-	height: 50%;
-	padding-top: 50%;
-	padding-bottom: 50%;
-	
+.container{
+	position: absolute;
+	background-color: #F4A45B; 
+	min-height: 100%;
+	min-width: 100%;
 }
