@@ -1,20 +1,28 @@
-.container{
+
+nav{
+    display: flex;
+    height: 100%;
     position: relative;
     height: 70px;
     background-color: rgb(75, 87, 100);
     width: 100%;
     border-bottom: 5px solid rgb(233, 128, 99);
-}
-p{
-    text-align: center;
-    padding-top: 7%;
-    color: #ffffff;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1rem;
     
 }
-button{
+.title {
+    text-align: center;
+    margin: auto;
+    color: #ffffff;
+    
+}
+.eye {
     position: absolute;
     right: 5%;
     top: 50%;
+    transform: translateY(-50%);
+    color: #ffffff;
+    font-size: 1em;
+    border: 1px solid rgb(233, 128, 99);
+    border-radius: 100%;
+    padding: 1%;
 }

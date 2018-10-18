@@ -1,13 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './componets/App';
-//import Splash from './componets/Splash';
-import Nav from './componets/Nav';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import Supermarket from './components/Supermarket';
+import App from './components/App';
+import Splash from './components/Splash';
+import Nav from './components/Nav';
 
 
-ReactDOM.render(<App />, document.getElementById('root'));
-ReactDOM.render(<Nav />, document.getElementById('root'));
+ReactDOM.render(
+    <BrowserRouter>
+        <Switch>
+            <Route path="/App"  component={App} />
+            <Route path="/Supermarket"  component={Supermarket} />
+            <Route path="/Splash"  component={Splash} />
+            <Route path="/Nav"  component={Nav} />
 
-//ReactDOM.render(<Splash />, document.getElementById('root'));
+        </Switch>
+    </BrowserRouter>
+, document.getElementById('root')
 
-
+);

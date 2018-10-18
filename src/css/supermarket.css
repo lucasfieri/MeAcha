@@ -1,0 +1,41 @@
+.img-supermarket{
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+
+}
+
+.list-supermarket{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+    list-style: none;
+}
+
+li{
+    width: 50%;
+    text-align: center;
+}
+p{
+    text-align: center;
+    margin: auto;
+    color: rgb(152, 154, 163);
+    
+}
+ul{
+    margin: auto;
+    max-width: 400px;
+}
+.buttons{
+    width: 90px;
+    height: 25px;
+    background-color: rgb(233, 128, 99);
+    border-radius: 5px;
+    margin: auto;
+    
+}
+i{
+    color: rgb(152, 154, 163);
+}

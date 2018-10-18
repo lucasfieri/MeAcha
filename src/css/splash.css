@@ -1,12 +1,12 @@
 
-#logo{
+.logo {
 	width: 40%;
 	margin:auto; 
 	display: block;
 	max-width: 250px;
 
 }
-.container{
+.splash-container {
 	display: flex;
 	position: absolute;
 	background-color: #F4A45B; 
