@@ -8,17 +8,41 @@ class Supermarket extends Component {
     return (
       <ul className="list-supermarket">
         <li><img src={Image} className="img-supermarket" alt="Supermercado Extra"></img>
-        <p>Supermercado</p>
-        <div className="buttons"><i className="fas fa-volume-up"></i><i className="fas fa-arrow-right"></i></div></li>
+          <p className="supermarket-name">Supermercado</p>
+          <div className="buttons">
+            <i className="fas fa-volume-up button-volume"></i>
+            <div className="box-arrow">
+              <i className="fas fa-arrow-right button-arrow"></i>
+            </div>
+          </div>
+        </li>
         <li> <img src={Image} className="img-supermarket" alt="Supermercado Extra"></img>
-        <p>Supermercado</p>
-        <div className="buttons"><i className="fas fa-volume-up"></i><i className="fas fa-arrow-right"></i></div></li>
+          <p className="supermarket-name">Supermercado</p>
+          <div className="buttons">
+            <i className="fas fa-volume-up button-volume"></i>
+            <div className="box-arrow">
+              <i className="fas fa-arrow-right button-arrow"></i>
+            </div>
+          </div>
+        </li>
         <li><img src={Image} className="img-supermarket" alt="Supermercado Extra"></img>
-        <p>Supermercado</p>
-        <div className="buttons"><i className="fas fa-volume-up"></i><i className="fas fa-arrow-right"></i></div></li>
+          <p className="supermarket-name">Supermercado</p>
+          <div className="buttons">
+            <i className="fas fa-volume-up button-volume"></i>
+            <div className="box-arrow">
+              <i className="fas fa-arrow-right button-arrow"></i>
+            </div>
+          </div>
+        </li>
         <li><img src={Image} className="img-supermarket" alt="Supermercado Extra"></img>
-        <p>Supermercado</p>
-        <div className="buttons"><i className="fas fa-volume-up"></i><i className="fas fa-arrow-right"></i></div></li>
+          <p className="supermarket-name">Supermercado</p>
+          <div className="buttons">
+            <i className="fas fa-volume-up button-volume"></i>
+            <div className="box-arrow">
+              <i className="fas fa-arrow-right button-arrow"></i>
+            </div>
+          </div>
+        </li>
      </ul>
     );
   }

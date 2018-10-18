@@ -1,11 +1,11 @@
-.img-supermarket{
-    width: 100px;
-    height: 100px;
+.img-supermarket {
+    width: 65px;
+    height: 65px;
     border-radius: 100%;
 
 }
 
-.list-supermarket{
+.list-supermarket {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -14,28 +14,55 @@
     list-style: none;
 }
 
-li{
+li {
     width: 50%;
     text-align: center;
+    padding-top: 30px;
 }
-p{
+.supermarket-name {
     text-align: center;
     margin: auto;
     color: rgb(152, 154, 163);
-    
+    padding-bottom: 10px;
+    padding-top: 5px;
 }
-ul{
-    margin: auto;
-    max-width: 400px;
+
+ul {
+    margin-top: 10%;
+    margin-left: auto;
+    margin-bottom: auto;
+    margin-right: auto;
+    max-width: 250px;
 }
-.buttons{
-    width: 90px;
-    height: 25px;
+.buttons {
+    width: 85px;
+    height: 26px;
     background-color: rgb(233, 128, 99);
     border-radius: 5px;
     margin: auto;
-    
+    display: flex;
 }
-i{
-    color: rgb(152, 154, 163);
+.button-volume {
+    color: #4B5764;
+}
+
+.button-arrow {
+    color:rgb(233, 128, 99);
+}
+.button-arrow, .button-volume {
+    position: relative;
+    margin: auto; 
+}
+
+.box-arrow {
+    display: flex;
+    position: relative;
+    width: 45%;
+    height: 80%;
+    background-color: white;
+    border-radius: 3px;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 3px;
+    border-bottom: rgba(75, 87, 100, 0.8) 1px solid;
 }
