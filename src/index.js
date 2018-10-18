@@ -1,22 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import Supermarket from './components/Supermarket';
-import App from './components/App';
+// eslint-disable-next-line
+import { Router, Link } from "@reach/router";
+import Shell from './components/Shell';
 import Splash from './components/Splash';
-import Nav from './components/Nav';
-
 
 ReactDOM.render(
-    <BrowserRouter>
-        <Switch>
-            <Route path="/App"  component={App} />
-            <Route path="/Supermarket"  component={Supermarket} />
-            <Route path="/Splash"  component={Splash} />
-            <Route path="/Nav"  component={Nav} />
-
-        </Switch>
-    </BrowserRouter>
+    <div>
+        <Router>
+            <Splash path="/" />
+            <Shell path="Shell/*" />
+        </Router>  
+    </div>
+    
 , document.getElementById('root')
 
 );

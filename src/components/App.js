@@ -1,14 +1,17 @@
 import React, { Component } from 'react';
 import '../css/reset.css';
 import '../css/default.css';
-import Nav from './Nav.js';
-
+import '../css/nav.css';
 
 class App extends Component {
+
   render() {
-    return (
-      <Nav />
+    return ( 
       <div className="container">
+        <nav>
+            <h1 className="title">Selecione um supermercado</h1>
+            <i className="far fa-eye eye"></i>
+        </nav>
       </div>
     );
   }
