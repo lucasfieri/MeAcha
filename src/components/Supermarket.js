@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 import Image from '../images/extra.png';
 import '../css/supermarket.css';
+import { Link } from "@reach/router";
 
 
 class Supermarket extends Component {
   render() {
     return (
       <ul className="list-supermarket">
-        <li><img src={Image} className="img-supermarket" alt="Supermercado Extra"></img>
+        <li><Link to="/Detail"><img src={Image} className="img-supermarket" alt="Supermercado Extra"></img></Link>
           <p className="supermarket-name">Supermercado</p>
           <div className="buttons">
             <i className="fas fa-volume-up button-volume"></i>
@@ -16,7 +17,7 @@ class Supermarket extends Component {
             </div>
           </div>
         </li>
-        <li> <img src={Image} className="img-supermarket" alt="Supermercado Extra"></img>
+        <li><Link to="/Detail"><img src={Image} className="img-supermarket" alt="Supermercado Extra"></img></Link>
           <p className="supermarket-name">Supermercado</p>
           <div className="buttons">
             <i className="fas fa-volume-up button-volume"></i>
@@ -25,7 +26,7 @@ class Supermarket extends Component {
             </div>
           </div>
         </li>
-        <li><img src={Image} className="img-supermarket" alt="Supermercado Extra"></img>
+        <li><Link to="/Detail"><img src={Image} className="img-supermarket" alt="Supermercado Extra"></img></Link>
           <p className="supermarket-name">Supermercado</p>
           <div className="buttons">
             <i className="fas fa-volume-up button-volume"></i>
@@ -34,7 +35,7 @@ class Supermarket extends Component {
             </div>
           </div>
         </li>
-        <li><img src={Image} className="img-supermarket" alt="Supermercado Extra"></img>
+        <li><Link to="/Detail"><img src={Image} className="img-supermarket" alt="Supermercado Extra"></img></Link>
           <p className="supermarket-name">Supermercado</p>
           <div className="buttons">
             <i className="fas fa-volume-up button-volume"></i>

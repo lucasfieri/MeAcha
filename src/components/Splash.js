@@ -5,7 +5,7 @@ import  '../css/splash.css';
 class Splash extends Component {
     componentDidMount(){
         setTimeout(function() {
-            window.location.pathname="/Shell";
+            window.location.pathname="/Nav";
         }, 3000);
     }
     render() {

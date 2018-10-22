@@ -1,21 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 // eslint-disable-next-line
-import { Router, Link } from "@reach/router";
-import Shell from './components/Shell';
+import { Router} from "@reach/router";
+import Nav from './components/Nav';
 import Splash from './components/Splash';
 import SupermarketDetail from './components/SupermarketDetail'
 
 ReactDOM.render(
-    
-    <SupermarketDetail></SupermarketDetail>
-    //<div>
-       // <Router>
-            //<Splash path="/" />
-            //<Shell path="Shell/*" />
-        //</Router>  
-    //</div>
-    
+    <div>
+        <Router>
+            <Splash path="/" />
+            <Nav path="Nav/*" />
+            <SupermarketDetail path="/Detail" />
+        </Router>  
+    </div>
 , document.getElementById('root')
 
 );

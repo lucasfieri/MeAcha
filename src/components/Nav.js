@@ -6,7 +6,7 @@ import App from './App';
 import Supermarket from './Supermarket';
 
 
-class Shell extends Component {
+class Nav extends Component {
     render() {
       return (
         <div>
@@ -19,6 +19,6 @@ class Shell extends Component {
     }
   }
   
-  export default Shell;
+  export default Nav;
   
     
