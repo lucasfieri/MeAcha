@@ -4,14 +4,17 @@ import ReactDOM from 'react-dom';
 import { Router, Link } from "@reach/router";
 import Shell from './components/Shell';
 import Splash from './components/Splash';
+import SupermarketDetail from './components/SupermarketDetail'
 
 ReactDOM.render(
-    <div>
-        <Router>
-            <Splash path="/" />
-            <Shell path="Shell/*" />
-        </Router>  
-    </div>
+    
+    <SupermarketDetail></SupermarketDetail>
+    //<div>
+       // <Router>
+            //<Splash path="/" />
+            //<Shell path="Shell/*" />
+        //</Router>  
+    //</div>
     
 , document.getElementById('root')
 

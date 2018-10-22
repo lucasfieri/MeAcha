@@ -1,0 +1,63 @@
+.containerDetail {
+    display: flex;
+    width: 210px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+    margin: auto;
+    padding-top: 100px;
+    border-bottom: 5px solid rgb(233, 128, 99);
+    height: 100%;
+}
+
+.detail {
+    width: 170px;
+    height: 170px;
+    border-radius: 100%;
+    margin: auto;
+    position: relative;
+    border-bottom: 3px solid rgb(75, 87, 100);
+    border-right: 3px solid rgb(75, 87, 100);
+    border-left: 3px solid rgb(233, 128, 99);
+    border-top: 3px solid rgb(233, 128, 99);
+    padding: 1px;
+}
+
+.name-supermarket-detail {
+    position: relative;
+    margin: auto;
+    text-align: center;
+    font-weight: 700;
+    font-size: 35px;
+    padding-top: 50px;
+    padding-bottom: 20px;
+    letter-spacing: -1px;
+}
+
+.color-detail {
+    color: rgb(75, 87, 100);
+    
+}
+.magin-weight-detail {
+    margin: auto;
+    font-weight: 400;
+}
+.street-detail {
+    font-size: 12px;
+    font-style: italic;
+    padding-bottom: 10px;
+}
+
+.neighborhood-detail {
+    font-size: 12px;
+    color:rgb(233, 128, 99); 
+    padding-bottom: 10px;
+    letter-spacing: 1px;
+}
+.city-detail {
+    font-size: 12px;
+    padding-bottom: 30px;
+    font-style: italic;
+    letter-spacing: 1px;
+}
