@@ -1,13 +1,10 @@
 import React, { Component } from 'react';
-import Image from '../images/extra.png';
+import Image from '../images/pt.svg';
 import '../css/supermarket.css';
 import { Link } from "@reach/router";
 
 
 class Supermarket extends Component {
-  componentWillMount() {
-    window.localStorage.setItem("activeScreen", "home");
-}
   
   render() {
     return (

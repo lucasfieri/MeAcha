@@ -3,11 +3,13 @@ import Image from '../images/extra-frente.jpg';
 import '../css/supermarketdetail.css';
 
 class SupermarketDetail extends Component {
-    componentWillMount() {
-        window.localStorage.setItem("activeScreen", "detail");
+    componentDidMount() {
+        this.props.propDetail = true
     }
-    
 
+    componentWillUnmount() {
+        this.props.propDetail = false
+    }
     render() {
         return (
             <div className="containerDetail">

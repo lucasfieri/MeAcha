@@ -5,21 +5,29 @@ import Supermarket from './Supermarket';
 import SupermarketDetail from './SupermarketDetail';
 
 class Shell extends Component {
-
-  render() {
-      return (
-        <div>
-            <Nav />
-            <Router>
-                <Supermarket path="/" />
-                <SupermarketDetail path="Splash/Detail" />
-            </Router> 
-
-        </div>
-      );
+  constructor(props) {
+    super(props);
+    this.state = {
+      shellEstado: 0
     }
   }
   
-  export default Shell;
-  
-    
+  myCallback = (dataFromChild) => {
+   this.setState ({shellEstado: dataFromChild})
+  }
+  render() {
+    return (
+      <div>
+        <Nav propsdaNav={0} />
+        <Router>
+          <Supermarket path="/" />
+          <SupermarketDetail path="Splash/Detail" propDetail={this.myCallback} />
+        </Router>
+      </div>
+    );
+  }
+}
+
+export default Shell;
+
+

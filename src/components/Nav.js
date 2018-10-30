@@ -5,10 +5,15 @@ import '../css/nav.css';
 import { Link } from "@reach/router";
 
 class Nav extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      navEstado: this.props.propsdaNav
+    }
+  }
 
   render() {
-  const screen = window.localStorage.getItem("activeScreen")
-    if (screen === "home") {
+    if (this.state.navEstado === 0) {
       return (
         <div className="container">
           <nav>
@@ -19,7 +24,7 @@ class Nav extends Component {
       );
     }
 
-    else if (screen === "detail") {
+    else if (this.state.navEstado === 1) {
       return (
         <div className="container">
           <nav>
