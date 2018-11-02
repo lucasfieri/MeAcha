@@ -3,6 +3,10 @@ const app = express();
 const bodyParser = require('body-parser');
 const port = 3001;
 const mysql = require('mysql');
+const cors = require('cors')
+
+
+app.use(cors())
 
 //configurando o body parser para pegar POSTS mais tarde
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -38,4 +42,20 @@ function execSQLQuery(sqlQry, res){
 
 router.get('/setor', (req, res) =>{
     execSQLQuery('SELECT * FROM setor', res);
+})
+
+router.get('/corredor', (req, res) =>{
+  execSQLQuery('SELECT * FROM corredor', res);
+})
+
+router.get('/produto', (req, res) =>{
+  execSQLQuery('SELECT * FROM produto', res);
+})
+
+router.get('/supermercado', (req, res) =>{
+  execSQLQuery('SELECT * FROM supermercado', res);
+})
+
+router.get('/variedade', (req, res) =>{
+  execSQLQuery('SELECT * FROM variedade', res);
 })
