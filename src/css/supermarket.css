@@ -79,3 +79,12 @@ ul {
     margin-right: 3px;
     border-bottom: rgba(75, 87, 100, 0.8) 1px solid;
 }
+
+.btn-supermarket-information {
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+}

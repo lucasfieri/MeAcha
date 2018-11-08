@@ -9,7 +9,7 @@ ReactDOM.render(
         <Router>
             <Splash path="/" />
             <Shell path="Shell/*" />
-        </Router>  
+        </Router> 
     </div>
 , document.getElementById('root')
 

@@ -3,15 +3,16 @@ import { Router } from "@reach/router";
 import Supermarket from './Supermarket';
 import SupermarketDetail from './SupermarketDetail';
 
+
 class Shell extends Component {
 
   render() {
     return (
       <div>
-        <Router>
+         <Router>
           <Supermarket path="/" />
-          <SupermarketDetail path="Splash/Detail" />
-        </Router>
+          <SupermarketDetail path="Splash/Detail/:supermarketSelected"/>
+        </Router> 
       </div>
     );
   }

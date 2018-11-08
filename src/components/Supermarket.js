@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import Image from '../images/pt.svg';
-import FirstNav from './FirstNav';
+import NavBar from './NavBar';
 import '../css/supermarket.css';
 import { Link } from "@reach/router";
 const axios = require("axios");
@@ -8,65 +7,50 @@ const axios = require("axios");
 
 class Supermarket extends Component {
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      supermarket: [],
-    };
-  }
+	constructor(props) {
+		super(props);
+		this.state = {
+			supermarkets: [],
+			supermarketSelected: null
+		};
+	}
 
-  componentDidMount() {
-    axios.get("http://localhost:3001/supermercado").then(res => {  
-    this.setState({ supermarket: res.data })
-    console.log(this.state.supermarket)
-    })
+	
+	componentWillMount() {
+		axios.get("http://localhost:3001/supermercado").then(res => {
+			this.setState({ supermarkets: res.data })
+		});
+	}
 
-  }
-  render() {
-    return (
-      <div>
-        <FirstNav />
-        <ul className="list-supermarket">
-          <li><Link to="Splash/Detail"><img src={Image} className="img-supermarket" alt="Supermercado Extra"></img></Link>
-            <p className="supermarket-name">{this.state.supermarket}</p>
-            <div className="buttons">
-              <i className="fas fa-volume-up button-volume"></i>
-              <div className="box-arrow">
-                <i className="fas fa-arrow-right button-arrow"></i>
-              </div>
-            </div>
-          </li>
-          <li><Link to="/Detail"><img src={Image} className="img-supermarket" alt="Supermercado Extra"></img></Link>
-            <p className="supermarket-name">Supermercado</p>
-            <div className="buttons">
-              <i className="fas fa-volume-up button-volume"></i>
-              <div className="box-arrow">
-                <i className="fas fa-arrow-right button-arrow"></i>
-              </div>
-            </div>
-          </li>
-          <li><Link to="/Detail"><img src={Image} className="img-supermarket" alt="Supermercado Extra"></img></Link>
-            <p className="supermarket-name">Supermercado</p>
-            <div className="buttons">
-              <i className="fas fa-volume-up button-volume"></i>
-              <div className="box-arrow">
-                <i className="fas fa-arrow-right button-arrow"></i>
-              </div>
-            </div>
-          </li>
-          <li><Link to="/Detail"><img src={Image} className="img-supermarket" alt="Supermercado Extra"></img></Link>
-            <p className="supermarket-name">Supermercado</p>
-            <div className="buttons">
-              <i className="fas fa-volume-up button-volume"></i>
-              <div className="box-arrow">
-                <i className="fas fa-arrow-right button-arrow"></i>
-              </div>
-            </div>
-          </li>
-        </ul>
-      </div>
-    );
-  }
+	handleClick = (index) => {
+		this.setState({supermarketSelected:index})
+	}
+	
+	render() {
+		return (
+			<div>
+				<NavBar type={1} />
+				<ul className="list-supermarket">
+					{this.state.supermarkets.map((supermarket, index) => (
+						<li key={index}>
+							<Link to={"Splash/Detail/"+ index} >
+								<button className="btn-supermarket-information"  >
+									<img src={require(`../images/${supermarket.IMAGEM_S}`)} className="img-supermarket" alt={Supermarket.NOME_S} />
+								</button>
+							</Link>
+							<p className="supermarket-name">{supermarket.NOME_S}</p>
+							<div className="buttons">
+								<i className="fas fa-volume-up button-volume"></i>
+								<div className="box-arrow">
+									<i className="fas fa-arrow-right button-arrow"></i>
+								</div>
+							</div>
+						</li>
+					))}
+				</ul>
+			</div>
+		);
+	}
 }
 
 export default Supermarket;
