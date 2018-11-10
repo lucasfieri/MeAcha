@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import NavBar from './NavBar';
+import BtnNext from '../images/icons/btn-next.png';
+import BtnSpeaker from '../images/icons/btn-speaker.png'
 import '../css/supermarket.css';
 import { Link } from "@reach/router";
 const axios = require("axios");
@@ -22,10 +24,6 @@ class Supermarket extends Component {
 		});
 	}
 
-	handleClick = (index) => {
-		this.setState({supermarketSelected:index})
-	}
-	
 	render() {
 		return (
 			<div>
@@ -33,16 +31,16 @@ class Supermarket extends Component {
 				<ul className="list-supermarket">
 					{this.state.supermarkets.map((supermarket, index) => (
 						<li key={index}>
-							<Link to={"Splash/Detail/"+ index} >
+							<Link to={"Splash/Detail/"+ supermarket.ID_S} >
 								<button className="btn-supermarket-information"  >
 									<img src={require(`../images/${supermarket.IMAGEM_S}`)} className="img-supermarket" alt={Supermarket.NOME_S} />
 								</button>
 							</Link>
 							<p className="supermarket-name">{supermarket.NOME_S}</p>
 							<div className="buttons">
-								<i className="fas fa-volume-up button-volume"></i>
+								<img src={BtnSpeaker} className="button-volume" alt="speaker icon"></img>
 								<div className="box-arrow">
-									<i className="fas fa-arrow-right button-arrow"></i>
+								<img src={BtnNext} className="button-arrow" alt="next icon"></img>
 								</div>
 							</div>
 						</li>

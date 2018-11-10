@@ -55,16 +55,11 @@ ul {
     margin: auto;
     display: flex;
 }
-.button-volume {
-    color: #4B5764;
-}
 
-.button-arrow {
-    color:rgb(233, 128, 99);
-}
 .button-arrow, .button-volume {
     position: relative;
     margin: auto; 
+    width: 3vh;
 }
 
 .box-arrow {

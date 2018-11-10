@@ -60,6 +60,6 @@ router.get('/variedade', (req, res) =>{
   execSQLQuery('SELECT * FROM variedade', res);
 })
 
-router.get('/imagem', (req, res) =>{
-  execSQLQuery('SELECT IMAGEM_s FROM supermercado', res);
+router.get('/Id', (req, res) =>{
+  execSQLQuery('SELECT ID_S FROM supermercado', res);
 })

@@ -27,6 +27,7 @@ nav{
 }
 
 .arrow-back{
+    width: 4vh;
     position: absolute;
     left: 5%;
     top: 50%;
