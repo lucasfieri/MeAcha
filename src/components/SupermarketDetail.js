@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
 import NavBar from './NavBar';
-import Image from '../images/irelia.png'
 import '../css/supermarketdetail.css';
 const axios = require("axios");
-
-
 
 class SupermarketDetail extends Component {
 
@@ -12,9 +9,9 @@ class SupermarketDetail extends Component {
 		super(props);
 		this.state = {
 			supermarkets: [],
-			infoSupermarket: []
+			infoSupermarket: [],
+			imageSupermarket:[]
 		};
-
 	}
 
 	componentWillMount() {
@@ -24,21 +21,28 @@ class SupermarketDetail extends Component {
 			});
 			const supermarket = this.state.supermarkets.filter(s => { return s.ID_S === parseInt(this.props.supermarketSelected, 10) })[0];
 			this.setState({ infoSupermarket: supermarket })
+			const image = [this.state.supermarkets.filter(s => { return s.ID_S === parseInt(this.props.supermarketSelected, 10) })[0]];
+			this.setState({ imageSupermarket: image })
+			console.log(supermarket)
+			console.log(image)
 		});
 	}
 
 	render() {
+		const supermarket  = this.state.infoSupermarket;
 		return (
 			<div>
-				<NavBar type={2} name={this.state.infoSupermarket.NOME_S} />
+				<NavBar type={2} name={supermarket.NOME_S} />
 				<div className="containerDetail">
-					<div className="image-border" >
-					<img src={Image} className="detail" alt={this.state.infoSupermarket.NOME_S} />
+					<div className="image-border">
+					{this.state.imageSupermarket.map((supermarket1, index) => (
+						<img src={require(`../images/${supermarket1.IMAGEM_S}`)} alt="few" key={index} className="detail"></img>
+					))}
 					</div>
-					<h2 className="name-supermarket-detail color-detail">{this.state.infoSupermarket.NOME_S}</h2>
-					<h3 className="street-detail color-detail magin-weight-detail">{this.state.infoSupermarket.RUA_S}</h3>
-					<h3 className="neighborhood-detail magin-weight-detail">{this.state.infoSupermarket.BAIRRO_S}</h3>
-					<h3 className="city-detail color-detail magin-weight-detail">{this.state.infoSupermarket.CIDADE_S}</h3>
+					<h2 className="name-supermarket-detail color-detail">{supermarket.NOME_S}</h2>
+					<h3 className="street-detail color-detail magin-weight-detail">{supermarket.RUA_S}</h3>
+					<h3 className="neighborhood-detail magin-weight-detail">{supermarket.BAIRRO_S}</h3>
+					<h3 className="city-detail color-detail magin-weight-detail">{supermarket.CIDADE_S}</h3>
 				</div>
 			</div>
 		);

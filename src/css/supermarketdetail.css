@@ -41,6 +41,7 @@
     padding-top: 50px;
     padding-bottom: 20px;
     letter-spacing: -1px;
+    min-width: 100%;
 }
 
 .color-detail {
@@ -55,6 +56,7 @@
     font-size: 12px;
     font-style: italic;
     padding-bottom: 10px;
+    min-width: 100%;
 }
 
 .neighborhood-detail {
@@ -62,10 +64,15 @@
     color:rgb(233, 128, 99); 
     padding-bottom: 10px;
     letter-spacing: 1px;
+    min-width: 100%;
 }
 .city-detail {
     font-size: 12px;
     padding-bottom: 30px;
     font-style: italic;
     letter-spacing: 1px;
+    min-width: 100%;
+}
+h3 {
+    text-align: center;
 }
