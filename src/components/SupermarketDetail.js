@@ -23,8 +23,6 @@ class SupermarketDetail extends Component {
 			this.setState({ infoSupermarket: supermarket })
 			const image = [this.state.supermarkets.filter(s => { return s.ID_S === parseInt(this.props.supermarketSelected, 10) })[0]];
 			this.setState({ imageSupermarket: image })
-			console.log(supermarket)
-			console.log(image)
 		});
 	}
 
