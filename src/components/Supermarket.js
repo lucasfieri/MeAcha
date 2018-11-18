@@ -33,14 +33,14 @@ class Supermarket extends Component {
 						<li key={index}>
 							<Link to={"Splash/Detail/"+ supermarket.ID_S} >
 								<button className="btn-supermarket-information"  >
-									<img src={require(`../images/${supermarket.IMAGEM_S}`)} className="img-supermarket" alt={Supermarket.NOME_S} />
+									<img src={require(`../images/${supermarket.IMAGEM_S}`)} className="img-supermarket" alt={"Imagem do "+ Supermarket.NOME_S} />
 								</button>
 							</Link>
 							<p className="supermarket-name">{supermarket.NOME_S}</p>
 							<div className="buttons">
-								<img src={BtnSpeaker} className="button-volume" alt="speaker icon"></img>
+								<img src={BtnSpeaker} className="button-volume" alt="Ícone de autofalante"></img>
 								<div className="box-arrow">
-								<img src={BtnNext} className="button-arrow" alt="next icon"></img>
+								<img src={BtnNext} className="button-arrow" alt="Ícone para avançar"></img>
 								</div>
 							</div>
 						</li>

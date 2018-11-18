@@ -5,7 +5,7 @@ import '../css/default.css';
 import '../css/nav.css';
 import { Link } from "@reach/router";
 
-function NavBar({ type }) {
+function NavBar({ type, name }) {
 	if (type === 1) {
 		return(
 					<div className="container">
@@ -20,7 +20,7 @@ function NavBar({ type }) {
 			<div className="container">
 				<nav>
 					<Link to="/Shell"><img src={BtnReturn} className="arrow-back" alt="arrow back icon"></img></Link>
-					<h1 className="title">{this.props.name}</h1>
+					<h1 className="title">{name}</h1>
 				</nav>
 			</div>
 		);

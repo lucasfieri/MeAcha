@@ -4,7 +4,6 @@ import '../css/supermarketdetail.css';
 const axios = require("axios");
 
 class SupermarketDetail extends Component {
-
 	constructor(props) {
 		super(props);
 		this.state = {
@@ -34,7 +33,7 @@ class SupermarketDetail extends Component {
 				<div className="containerDetail">
 					<div className="image-border">
 					{this.state.imageSupermarket.map((supermarket1, index) => (
-						<img src={require(`../images/${supermarket1.IMAGEM_S}`)} alt="few" key={index} className="detail"></img>
+						<img src={require(`../images/${supermarket1.IMAGEM_S}`)} alt={"Imagem do " + supermarket.NOME_S} key={index} className="detail"></img>
 					))}
 					</div>
 					<h2 className="name-supermarket-detail color-detail">{supermarket.NOME_S}</h2>
@@ -44,7 +43,6 @@ class SupermarketDetail extends Component {
 				</div>
 			</div>
 		);
-
 	}
 }
 export default SupermarketDetail;
