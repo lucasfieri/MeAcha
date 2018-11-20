@@ -1,34 +1,12 @@
 import React, { Component } from 'react';
-import Autosuggest from 'react-autosuggest';
+import NavBar from './NavBar';
 import '../css/reset.css';
 import '../css/default.css';
+import '../css/search.css';
+import SearchIcon from '../images/icons/btn-search.png'
 const axios = require("axios");
 
-const getSuggestions = value => {
-	const inputValue = value.trim().toLowerCase();
-	const inputLength = inputValue.length;
-
-	return inputLength === 0 ? [] : this.state.itens.filter(item =>
-		item.NOME_PRODUTO.toLowerCase().slice(0, inputLength) === inputValue
-	);
-};
-
-const getSuggestionValue = suggestion => suggestion.NOME_PRODUTO;
-
-const renderSuggestion = suggestion => (
-	<div>
-		{suggestion.NOME_PRODUTO}
-	</div>
-);
-
 class SearchBar extends Component {
-
-	componentWillMount() {
-		axios.get("http://localhost:3001/produto").then(res => {
-			this.setState({ itens: res.data })
-		});
-	}
-
 
 	constructor(props) {
 		super(props);
@@ -38,44 +16,15 @@ class SearchBar extends Component {
 		};
 	}
 
-
-	onChange = (event, { newValue }) => {
-		this.setState({
-			value: newValue
-		});
-	};
-
-
-	onSuggestionsFetchRequested = ({ value }) => {
-		this.setState({
-			itens: getSuggestions(value)
-		});
-	};
-
-	onSuggestionsClearRequested = () => {
-    this.setState({
-      itens: []
-    });
-  };
-
-
 	render() {
-		const { value, itens } = this.state;
-		const inputProps = {
-      placeholder: 'Digite um supermarcado',
-      value,
-      onChange: this.onChange
-		};
-		
 		return (
-      <Autosuggest
-        itens={itens}
-        onSuggestionsFetchRequested={this.onSuggestionsFetchRequested}
-        onSuggestionsClearRequested={this.onSuggestionsClearRequested}
-        getSuggestionValue={getSuggestionValue}
-        renderSuggestion={renderSuggestion}
-        inputProps={inputProps}
-      />
+			<div>
+				<NavBar type={3} name={"Supermarcado 1"} street={"Avenida Indefinida, 111"} neighborhood={"Jd. Santa Rosália"} />
+				<div className="container-input">
+					<input type="text" placeholder="Digite o que deseja buscar" className="input-text"/>
+					<button type="submit" className="btn-search"><img src={SearchIcon} alt="Ícone de Busca" className="img-btn-search"/></button>
+				</div>
+			</div>
 		)
 	}
 }

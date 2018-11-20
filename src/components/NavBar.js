@@ -5,14 +5,14 @@ import '../css/default.css';
 import '../css/nav.css';
 import { Link } from "@reach/router";
 
-function NavBar({ type, name }) {
+function NavBar({ type, name, street, neighborhood }) {
 	if (type === 1) {
 		return(
-					<div className="container">
-			<nav>
-				<h1 className="title">Selecione um supermercado</h1>
-			</nav>
-		</div>
+			<div className="container">
+				<nav>
+					<h1 className="title">Selecione um supermercado</h1>
+				</nav>
+			</div>
 		)
 	}
 	else if (type === 2) {
@@ -28,9 +28,10 @@ function NavBar({ type, name }) {
 	else {
 		return (
 			<div className="container">
-				<nav>
+				<nav className="nav-search">
 					<Link to="/Shell"><img src={BtnReturn} className="arrow-back" alt="arrow back icon"></img></Link>
-					<h1 className="title">Supermercado 1</h1>
+					<h1 className="title-orange">{name}</h1>
+					<h2 className="subtitle-detail">{street}, {neighborhood}</h2>
 				</nav>
 			</div>
 		)

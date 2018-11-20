@@ -6,13 +6,11 @@ nav{
     background-color: rgb(75, 87, 100);
     width: 100%;
     border-bottom: 5px solid rgb(233, 128, 99);
-    
 }
 .title {
     text-align: center;
     margin: auto;
     color: #ffffff;
-    
 }
 .eye {
     position: absolute;
@@ -25,13 +23,28 @@ nav{
     border-radius: 100%;
     padding: 1%;
 }
-
 .arrow-back{
     width: 4vh;
     position: absolute;
     left: 5%;
     top: 50%;
     transform: translateY(-50%);
+}
+.nav-search {
+    flex-direction: column;
+}
+.title-orange {
+    text-align: center;
+    margin: auto;
+    color: rgb(233, 128, 99);
+    font-size: 0.9em;
+    padding-top: 2vh;
+}
+.subtitle-detail {
+    text-align: center;
+    margin: auto;
     color: #ffffff;
-    font-size: 1em;
+    font-size: 0.7em;
+    font-weight: 400;
+    padding-bottom: 1vh;
 }
