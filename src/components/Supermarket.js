@@ -41,7 +41,7 @@ class Supermarket extends Component {
 								<img src={BtnSpeaker} className="button-volume" alt="Ícone de autofalante"></img>
 								<div className="box-arrow">
 								<Link to={"Splash/Search/"+ supermarket.ID_S} >
-									<button className="btn-supermarket-information">
+									<button className="btn-supermarket-information btn-next">
 										<img src={BtnNext} className="button-arrow" alt="Ícone para avançar"></img>
 								</button>
 								</Link>

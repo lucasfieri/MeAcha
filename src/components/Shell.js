@@ -13,7 +13,7 @@ class Shell extends Component {
         <Router>
           <Supermarket path="/" />
           <SupermarketDetail path="Splash/Detail/:supermarketSelected"/>
-          <SearchBar path="Splash/Search/*" />
+          <SearchBar path="Splash/Search/:supermarketSelected" />
         </Router>  
       </div>
     );

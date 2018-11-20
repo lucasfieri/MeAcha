@@ -6,8 +6,8 @@
 
 @media (min-width: 768px) {
     .img-supermarket {
-        width: 17vmin;
-        height: 17vmin;
+        width: 100px;
+        height: 100px;
     }
 }
 
@@ -59,7 +59,7 @@ ul {
 .button-arrow, .button-volume {
     position: relative;
     margin: auto; 
-    width: 3vh;
+    width: 20px;
 }
 
 .box-arrow {
@@ -76,10 +76,14 @@ ul {
 }
 
 .btn-supermarket-information {
-    background-color: Transparent;
+    background-color: transparent;
     background-repeat:no-repeat;
     border: none;
     cursor:pointer;
     overflow: hidden;
     outline:none;
+}
+.btn-next {
+    width: 100%;
+    padding-left: 10px;
 }
