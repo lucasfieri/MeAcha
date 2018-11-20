@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();         
-const bodyParser = require('body-parser');
+//const bodyParser = require('body-parser');
 const port = 3001;
 const mysql = require('mysql');
 const cors = require('cors')
@@ -9,12 +9,11 @@ const cors = require('cors')
 app.use(cors())
 
 //configurando o body parser para pegar POSTS mais tarde
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
+//app.use(bodyParser.urlencoded({ extended: true }));
+//app.use(bodyParser.json());
 
 //definindo as rotas
 const router = express.Router();
-router.get('/', (req, res) => res.json({ message: 'Funcionando!' }));
 app.use('/', router);
 	
 //inicia o servidor
@@ -62,4 +61,8 @@ router.get('/variedade', (req, res) =>{
 
 router.get('/Id', (req, res) =>{
   execSQLQuery('SELECT ID_S FROM supermercado', res);
+})
+
+router.get('/produto:NOME_PRODUTO', (req, res) =>{
+  execSQLQuery('SELECT NOME_PRODUTO FROM produto', res);
 })

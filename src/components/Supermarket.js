@@ -30,7 +30,7 @@ class Supermarket extends Component {
 				<NavBar type={1} />
 				<ul className="list-supermarket">
 					{this.state.supermarkets.map((supermarket, index) => (
-						<li key={index}>
+						<li className="item-list-supermarket" key={index}>
 							<Link to={"Splash/Detail/"+ supermarket.ID_S} >
 								<button className="btn-supermarket-information"  >
 									<img src={require(`../images/${supermarket.IMAGEM_S}`)} className="img-supermarket" alt={"Imagem do "+ Supermarket.NOME_S} />

@@ -1,0 +1,21 @@
+.sugg-container {
+  width: 95%;
+  display:flex;
+  border-left: 0.5px solid rgba(191,191,191, .999);
+  border-right: 0.5px solid rgba(191,191,191, .999);
+  border-radius: 8px;
+}
+.sugg-list {
+  width: 100%;
+  list-style: none;
+
+}
+.item-sugg {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 50px;
+  margin: auto;
+  color: rgb(128, 128, 128);
+  border-bottom: 0.5px solid rgba(191,191,191, .999);
+  max-height: 40px;
+}

@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import NavBar from './NavBar';
+import Suggestions from './Suggestions';
 import '../css/reset.css';
 import '../css/default.css';
 import '../css/search.css';
 import SearchIcon from '../images/icons/btn-search.png'
-const axios = require("axios");
 
+const axios = require("axios");
+const produtosURL = "http://localhost:3001/produto"
 class SearchBar extends Component {
 
 	constructor(props) {
@@ -14,9 +16,10 @@ class SearchBar extends Component {
 			supermarkets: [],
 			infoSupermarket: [],
 			supermarketSelected: null,
-			itens: [],
-			value: ''
+			results: [],
+			query: ''
 		};
+
 	}
 	componentWillMount() {
 		axios.get("http://localhost:3001/supermercado").then(res => {
@@ -27,15 +30,34 @@ class SearchBar extends Component {
 			this.setState({ infoSupermarket: supermarket })
 		});
 	}
-	
+	getInfo = () => {
+    axios.get(`${produtosURL}`).then(res => {
+        this.setState({
+          results: res.data                        
+        })
+      })
+	}
+	handleInputChange = () => {
+		this.setState({
+			query: this.search.value
+		}, () => {
+      if (this.state.query && this.state.query.length > 1) {
+        if (this.state.query.length % 2 === 0) {
+          this.getInfo()
+        }
+      } 
+    })
+	}
 	render() {
-		const supermarket  = this.state.infoSupermarket;
+		const supermarket = this.state.infoSupermarket;
 		return (
 			<div>
+				{console.log(this.state.results, this.state.query)}
 				<NavBar type={3} name={supermarket.NOME_S} street={supermarket.RUA_S} neighborhood={supermarket.BAIRRO_S} />
 				<div className="container-input">
-					<input type="text" placeholder="Digite o que deseja buscar" className="input-text"/>
-					<button type="submit" className="btn-search"><img src={SearchIcon} alt="Ícone de Busca" className="img-btn-search"/></button>
+					<input type="text" placeholder="Digite o que deseja buscar" className="input-text" ref={input => this.search = input} onChange={this.handleInputChange}/>
+					<Suggestions results={this.state.results} />
+					<button type="submit" className="btn-search"><img src={SearchIcon} alt="Ícone de Busca" className="img-btn-search" /></button>
 				</div>
 			</div>
 		)
