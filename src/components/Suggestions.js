@@ -5,7 +5,7 @@ import '../css/suggestions.css';
 const Suggestions = (props) => {
   const options = props.results.slice(0,7).map(resultado => (
     <li key={resultado.ID_PRODUTOS} className="item-sugg">
-      <Link to={"Result/"+ resultado.NOME_PRODUTO} className="link-item">
+      <Link to={"Shell/"+ props.supermarketSelected + "/"+ resultado.NOME_PRODUTO} className="link-item">
         {resultado.NOME_PRODUTO}
       </Link>
     </li>

@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import NavBar from './NavBar';
 import Suggestions from './Suggestions';
-import '../css/reset.css';
-import '../css/default.css';
 import '../css/search.css';
 import SearchIcon from '../images/icons/btn-search.png'
 
@@ -52,11 +50,10 @@ class SearchBar extends Component {
 		const supermarket = this.state.infoSupermarket;
 		return (
 			<div>
-				{console.log(this.state.results, this.state.query)}
 				<NavBar type={3} name={supermarket.NOME_S} street={supermarket.RUA_S} neighborhood={supermarket.BAIRRO_S} />
 				<div className="container-input">
 					<input type="text" placeholder="Digite o que deseja buscar" className="input-text" ref={input => this.search = input} onChange={this.handleInputChange}/>
-					<Suggestions results={this.state.results} />
+					<Suggestions results={this.state.results} supermarketSelected={this.props.supermarketSelected}/>
 					<button type="submit" className="btn-search"><img src={SearchIcon} alt="Ícone de Busca" className="img-btn-search" /></button>
 				</div>
 			</div>

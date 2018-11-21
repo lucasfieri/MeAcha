@@ -3,7 +3,7 @@ import { Router } from "@reach/router";
 import Supermarket from './Supermarket';
 import SupermarketDetail from './SupermarketDetail';
 import SearchBar from './SearchBar';
-import Suggestions from './Suggestions';
+import Map from './Map';
 
 class Shell extends Component {
 
@@ -14,7 +14,7 @@ class Shell extends Component {
           <Supermarket path="/" />
           <SupermarketDetail path="Splash/Detail/:supermarketSelected"/>
           <SearchBar path="Splash/Search/:supermarketSelected" />
-          <Suggestions path="Result/:product" />
+          <Map path="Shell/:supermarketSelected/:product" />
         </Router>  
       </div>
     );
