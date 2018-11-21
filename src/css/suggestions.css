@@ -19,3 +19,7 @@
   border-bottom: 0.5px solid rgba(191,191,191, .999);
   max-height: 40px;
 }
+.link-item {
+  text-decoration:none;
+  color: inherit; 
+}
