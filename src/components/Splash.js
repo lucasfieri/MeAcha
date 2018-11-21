@@ -7,7 +7,7 @@ class Splash extends Component {
   componentDidMount() {
     setTimeout(() => {
       window.location.pathname = "/Shell";
-    }, 3000);
+    }, 4000);
   }
   render() {
     return (

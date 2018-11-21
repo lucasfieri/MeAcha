@@ -13,7 +13,6 @@ class Supermarket extends Component {
 		super(props);
 		this.state = {
 			supermarkets: [],
-			supermarketSelected: null
 		};
 	}
 

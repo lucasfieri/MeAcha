@@ -69,5 +69,5 @@ router.get('/Results/:supermarket/', (req, res) =>{
   //teste = res.json( );
   var product = req.query.product;
   var supermarket = req.params.supermarket;
-  execSQLQuery(`SELECT NOME_PRODUTO FROM produto WHERE NOME_PRODUTO LIKE '%${product}%'`, res);
+  execSQLQuery(`SELECT * FROM produto WHERE NOME_PRODUTO LIKE '%${product}%' ORDER BY NOME_PRODUTO`, res);
 })
