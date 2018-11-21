@@ -5,7 +5,7 @@ import '../css/search.css';
 import SearchIcon from '../images/icons/btn-search.png'
 
 const axios = require("axios");
-const produtosURL = "http://localhost:3001/produto"
+const produtosURL = "http://localhost:3001/Results/:"
 class SearchBar extends Component {
 
 	constructor(props) {
@@ -29,11 +29,11 @@ class SearchBar extends Component {
 		});
 	}
 	getInfo = () => {
-    axios.get(`${produtosURL}`).then(res => {
+    axios.get(`${produtosURL}${this.props.supermarketSelected}/?product=${this.state.query}`).then(res => {
         this.setState({
           results: res.data                        
-        })
-      })
+				}) ;
+			});
 	}
 	handleInputChange = () => {
 		this.setState({

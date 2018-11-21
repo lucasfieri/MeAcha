@@ -63,6 +63,11 @@ router.get('/Id', (req, res) =>{
   execSQLQuery('SELECT ID_S FROM supermercado', res);
 })
 
-router.get('/produto:NOME_PRODUTO', (req, res) =>{
-  execSQLQuery('SELECT NOME_PRODUTO FROM produto', res);
+
+router.get('/Results/:supermarket/', (req, res) =>{
+  //var teste = new Array()
+  //teste = res.json( );
+  var product = req.query.product;
+  var supermarket = req.params.supermarket;
+  execSQLQuery(`SELECT NOME_PRODUTO FROM produto WHERE NOME_PRODUTO LIKE '%${product}%'`, res);
 })
