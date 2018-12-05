@@ -28,6 +28,7 @@ class SearchBar extends Component {
 			this.setState({ infoSupermarket: supermarket })
 		});
 	}
+	
 	getInfo = () => {
     axios.get(`${produtosURL}${this.props.supermarketSelected}/?product=${this.state.query}`).then(res => {
         this.setState({
@@ -53,7 +54,7 @@ class SearchBar extends Component {
 				<NavBar type={3} name={supermarket.NOME_S} street={supermarket.RUA_S} neighborhood={supermarket.BAIRRO_S} />
 				<div className="container-input">
 					<input type="text" placeholder="Digite o que deseja buscar" className="input-text" ref={input => this.search = input} onChange={this.handleInputChange}/>
-					<Suggestions results={this.state.results} supermarketSelected={this.props.supermarketSelected}/>
+					<Suggestions results={this.state.results} supermarketChecked={this.props.supermarketSelected} />
 					<button type="submit" className="btn-search"><img src={SearchIcon} alt="Ícone de Busca" className="img-btn-search" /></button>
 				</div>
 			</div>

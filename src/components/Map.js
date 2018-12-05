@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import NavBar from './NavBar';
+import Mapa from '../images/mapa.png';
+import Rota from '../images/eletronicos.png';
+import '../css/map.css';
 
 const axios = require("axios");
-const produtosURL = "http://localhost:3001/produto"
 
 class Map extends Component {
 
@@ -12,8 +14,6 @@ class Map extends Component {
 			supermarkets: [],
 			infoSupermarket: [],
 			supermarketSelected: null,
-			results: [],
-			query: ''
 		};
 
 	}
@@ -22,7 +22,7 @@ class Map extends Component {
 			this.setState({
 				supermarkets: res.data
 			});
-			const supermarket = this.state.supermarkets.filter(s => { return s.ID_S === parseInt(this.props.supermarketSelected, 10) })[0];
+			const supermarket = this.state.supermarkets.filter(s => { return s.ID_S === parseInt(this.props.supermarketChecked, 10) })[0];
 			this.setState({ infoSupermarket: supermarket })
 		});
 	}
@@ -33,7 +33,8 @@ class Map extends Component {
 			<div>
 				<NavBar type={3} name={supermarket.NOME_S} street={supermarket.RUA_S} neighborhood={supermarket.BAIRRO_S} />
 				<div className="container-map">
-					
+					<img src={Mapa} className="mapa" alt="mapa"/>
+					<img src={Rota} className="rota" alt="rota"/>
 				</div>
 			</div>
 		)

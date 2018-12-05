@@ -1,0 +1,16 @@
+.mapa, .rota {
+  position: absolute;
+  height: 100%;
+}
+
+.mapa {
+  z-index: 1;
+}
+
+.rota {
+  z-index: 2;
+}
+
+.container-map {
+  overflow: auto;
+}

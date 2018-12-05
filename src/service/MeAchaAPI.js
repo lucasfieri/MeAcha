@@ -64,10 +64,12 @@ router.get('/Id', (req, res) =>{
 })
 
 
-router.get('/Results/:supermarket/', (req, res) =>{
-  //var teste = new Array()
-  //teste = res.json( );
+router.get('/Results/:supermarket', (req, res) =>{
   var product = req.query.product;
-  var supermarket = req.params.supermarket;
   execSQLQuery(`SELECT * FROM produto WHERE NOME_PRODUTO LIKE '%${product}%' ORDER BY NOME_PRODUTO`, res);
+})
+
+router.get('/Results/:supermarket/:product', (req, res) => {
+  var product = req.query.product;
+  execSQLQuery(`select ID_CORREDOR_PC, IMAGEM_PC, produto.NOME_PRODUTO from procor inner join produto on produto.ID_PRODUTOS = procor.ID_PROD_PC inner join corredor on corredor.ID_CORREDOR = procor.ID_CORREDOR_PC WHERE produto.ID_PRODUTOS = '${product}'`, res );
 })
