@@ -6,10 +6,6 @@ import SearchBar from './SearchBar';
 import Map from './Map';
 
 class Shell extends Component {
-  
- componentDidMount() {
-  debugger
- }
 
   render() {
     return (

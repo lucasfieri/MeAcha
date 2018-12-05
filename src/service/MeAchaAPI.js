@@ -63,6 +63,10 @@ router.get('/Id', (req, res) =>{
   execSQLQuery('SELECT ID_S FROM supermercado', res);
 })
 
+router.get('/supermercado/:imgsup', (req, res) =>{
+  var imgsup = req.params.imgsup;
+  execSQLQuery(`SELECT PLANTA_S FROM supermercado WHERE ID_S = ${imgsup}`, res);
+})
 
 router.get('/Results/:supermarket', (req, res) =>{
   var product = req.query.product;
