@@ -1,21 +1,49 @@
-.mapa, .rota {
-  position: relative;
+@media screen and (max-width:800px) {
+  .mapa, .rota {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .rota {
+    z-index: 2;
+    top: -884px;
+  }
+
+  .container-map {
+    overflow-x: scroll;
+  }
+
+  #root {
+    overflow: hidden;
+  }
+
+  .mapa {
+    z-index: 1;
+  }
+  
+  .rota {
+    z-index: 2;
+  }
+}
+
+@media screen and (min-width:801px) {
+  .mapa, .rota {
+  position: absolute;
   height: 100%;
-  overflow: hidden;
+  }
+
+  .mapa {
+    z-index: 1;
+  }
+  
+  .rota {
+    z-index: 2;
+  }
 }
 
-.mapa {
-  z-index: 1;
-}
 
-.rota {
-  z-index: 2;
-  top: -884px;
-}
-.container-map {
-  overflow-x: scroll;
-}
 
-#root {
-  overflow: hidden;
-}
+
+
+
