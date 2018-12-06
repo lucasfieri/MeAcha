@@ -20,6 +20,7 @@
     "eject": "react-scripts eject"
   },
   "devDependencies": {},
+  "homepage": "build/index.html",
   "browserslist": [
     ">0.2%",
     "not dead",

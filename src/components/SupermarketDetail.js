@@ -40,6 +40,7 @@ class SupermarketDetail extends Component {
 					<h3 className="street-detail color-detail magin-weight-detail">{supermarket.RUA_S}</h3>
 					<h3 className="neighborhood-detail magin-weight-detail">{supermarket.BAIRRO_S}</h3>
 					<h3 className="city-detail color-detail magin-weight-detail">{supermarket.CIDADE_S}</h3>
+					<h3 className="city-detail color-detail magin-weight-detail">Telefone:{supermarket.TELEFONE_s}</h3>
 				</div>
 			</div>
 		);
