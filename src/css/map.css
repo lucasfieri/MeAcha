@@ -1,6 +1,7 @@
 .mapa, .rota {
-  position: absolute;
+  position: relative;
   height: 100%;
+  overflow: hidden;
 }
 
 .mapa {
@@ -9,8 +10,12 @@
 
 .rota {
   z-index: 2;
+  top: -884px;
+}
+.container-map {
+  overflow-x: scroll;
 }
 
-.container-map {
-  overflow: auto;
+#root {
+  overflow: hidden;
 }

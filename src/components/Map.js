@@ -45,13 +45,17 @@ class Map extends Component {
 			});
 		});
 	}
+	componentDidMount(){
+		var teste = document.getElementById('container-map');
+		teste.scrollIntoView();
+	}
 
 	render() {
 		const supermarket = this.state.infoSupermarket;
 		return (
 			<div>
 				<NavBar type={4} name={supermarket.NOME_S} id={supermarket.ID_S} street={supermarket.RUA_S} neighborhood={supermarket.BAIRRO_S} />
-				<div className="container-map">
+				<div className="container-map" id="container-map">
 					{this.state.planta.map((planta, index) => (
 						<img src={require(`../images/maps/${planta.PLANTA_S}`)} alt={"Planta " + supermarket.NOME_S} key={index} className="mapa"></img>
 					))}
