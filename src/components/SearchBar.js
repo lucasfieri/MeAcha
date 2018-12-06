@@ -19,6 +19,7 @@ class SearchBar extends Component {
 		};
 
 	}
+	
 	componentWillMount() {
 		axios.get("http://192.168.0.20:3001/supermercado").then(res => {
 			this.setState({
@@ -36,6 +37,7 @@ class SearchBar extends Component {
 				}) ;
 			});
 	}
+
 	handleInputChange = () => {
 		this.setState({
 			query: this.search.value
@@ -47,6 +49,7 @@ class SearchBar extends Component {
       } 
     })
 	}
+
 	render() {
 		const supermarket = this.state.infoSupermarket;
 		return (

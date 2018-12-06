@@ -9,7 +9,7 @@ class SupermarketDetail extends Component {
 		this.state = {
 			supermarkets: [],
 			infoSupermarket: [],
-			imageSupermarket:[]
+			imageSupermarket: []
 		};
 	}
 
@@ -26,15 +26,15 @@ class SupermarketDetail extends Component {
 	}
 
 	render() {
-		const supermarket  = this.state.infoSupermarket;
+		const supermarket = this.state.infoSupermarket;
 		return (
 			<div>
 				<NavBar type={2} name={supermarket.NOME_S} />
 				<div className="containerDetail">
 					<div className="image-border">
-					{this.state.imageSupermarket.map((supermarket1, index) => (
-						<img src={require(`../images/${supermarket1.IMAGEM_S}`)} alt={"Imagem do " + supermarket.NOME_S} key={index} className="detail"></img>
-					))}
+						{this.state.imageSupermarket.map((supermarket1, index) => (
+							<img src={require(`../images/${supermarket1.IMAGEM_S}`)} alt={"Imagem do " + supermarket.NOME_S} key={index} className="detail"></img>
+						))}
 					</div>
 					<h2 className="name-supermarket-detail color-detail">{supermarket.NOME_S}</h2>
 					<h3 className="street-detail color-detail magin-weight-detail">{supermarket.RUA_S}</h3>
@@ -45,4 +45,5 @@ class SupermarketDetail extends Component {
 		);
 	}
 }
+
 export default SupermarketDetail;

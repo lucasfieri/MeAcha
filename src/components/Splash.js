@@ -9,6 +9,7 @@ class Splash extends Component {
       window.location.pathname = "/Shell";
     }, 4000);
   }
+
   render() {
     return (
       <div className="splash-container">
@@ -18,7 +19,6 @@ class Splash extends Component {
           <img src={Star} className="star" id="star-2" alt="Estrelas" />
           <img src={Star} className="star" id="star-3" alt="Estrelas" />
         </div>
-
       </div>
     );
   }

@@ -6,7 +6,6 @@ import '../css/supermarket.css';
 import { Link } from "@reach/router";
 const axios = require("axios");
 
-
 class Supermarket extends Component {
 
 	constructor(props) {
@@ -16,7 +15,6 @@ class Supermarket extends Component {
 		};
 	}
 
-	
 	componentWillMount() {
 		axios.get("http://192.168.0.20:3001/supermercado").then(res => {
 			this.setState({ supermarkets: res.data })

@@ -9,8 +9,7 @@ class Shell extends Component {
 
   render() {
     return (
-      <div>
-        
+      <div> 
         <Router>
           <Supermarket path="/" />
           <SupermarketDetail path="Splash/Detail/:supermarketSelected"/>
@@ -21,4 +20,5 @@ class Shell extends Component {
     );
   }
 }
+
 export default Shell;

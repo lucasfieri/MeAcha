@@ -1,16 +1,12 @@
 import React, { Component } from 'react';
 import NavBar from './NavBar';
-/* import Rota from '../images/eletronicos.png'; */
 import '../css/map.css';
 
 const axios = require("axios");
 const supermercadosURL = "http://192.168.0.20:3001/supermercado/"
 const rotaURL = "http://192.168.0.20:3001/research/"
 
-
-
 class Map extends Component {
-
 	constructor(props) {
 		super(props);
 		this.state = {
@@ -19,8 +15,8 @@ class Map extends Component {
 			planta: [],
 			rota: []
 		};
-
 	}
+
 	componentWillMount() {
 		axios.get("http://192.168.0.20:3001/supermercado").then(res => {
 			this.setState({
@@ -54,15 +50,14 @@ class Map extends Component {
 		const supermarket = this.state.infoSupermarket;
 		return (
 			<div>
-				<NavBar type={3} name={supermarket.NOME_S} street={supermarket.RUA_S} neighborhood={supermarket.BAIRRO_S} />
+				<NavBar type={4} name={supermarket.NOME_S} id={supermarket.ID_S} street={supermarket.RUA_S} neighborhood={supermarket.BAIRRO_S} />
 				<div className="container-map">
-				{this.state.planta.map((planta, index) => (
-					<img src={require(`../images/maps/${planta.PLANTA_S}`)} alt={"Planta " + supermarket.NOME_S} key={index} className="mapa"></img>
-				))}
-				{console.log(this.state.rota)}
-				{this.state.rota.map((rota, index) => (
-					<img src={require(`../images/maps/routes/${rota.IMAGEM_PC}`)} alt={"Corredor"} key={index} className="rota"></img>
-				))} 
+					{this.state.planta.map((planta, index) => (
+						<img src={require(`../images/maps/${planta.PLANTA_S}`)} alt={"Planta " + supermarket.NOME_S} key={index} className="mapa"></img>
+					))}
+					{this.state.rota.map((rota, index) => (
+						<img src={require(`../images/maps/routes/${rota.IMAGEM_PC}`)} alt={"Corredor"} key={index} className="rota"></img>	
+					))}
 				</div>
 			</div>
 		)
