@@ -5,7 +5,7 @@ import '../css/search.css';
 import SearchIcon from '../images/icons/btn-search.png'
 
 const axios = require("axios");
-const produtosURL = "http://localhost:3001/Results/:"
+const produtosURL = "http://192.168.0.20:3001/Results/:"
 class SearchBar extends Component {
 
 	constructor(props) {
@@ -20,7 +20,7 @@ class SearchBar extends Component {
 
 	}
 	componentWillMount() {
-		axios.get("http://localhost:3001/supermercado").then(res => {
+		axios.get("http://192.168.0.20:3001/supermercado").then(res => {
 			this.setState({
 				supermarkets: res.data
 			});

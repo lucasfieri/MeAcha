@@ -18,7 +18,7 @@ class Supermarket extends Component {
 
 	
 	componentWillMount() {
-		axios.get("http://localhost:3001/supermercado").then(res => {
+		axios.get("http://192.168.0.20:3001/supermercado").then(res => {
 			this.setState({ supermarkets: res.data })
 		});
 	}
